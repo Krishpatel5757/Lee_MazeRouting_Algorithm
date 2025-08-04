@@ -1,7 +1,7 @@
 import numpy as np
 from PIL import Image
 #Convert image into matrix
-img = Image.open("lee_algorithm_test_map_multiple_targets.png").convert("RGB")
+img = Image.open("Test_matrix.png").convert("RGB")
 l, w = img.size
 color_map = {
     (0, 0, 0): 'w',         # black
@@ -96,7 +96,7 @@ color_map_invert = {
     't': (255, 0, 0)       # red
 }
 
-cell_size = 10
+cell_size = 5
 rows = len(a)
 cols = len(a[0])
 
@@ -113,4 +113,5 @@ for y in range(rows):
                 pixels[x * cell_size + i, y * cell_size + j] = color
 
 # Save as JPG
-img.save("Output.jpg", "JPEG")
+
+img.save("Output_Matrix.jpg", "JPEG")
